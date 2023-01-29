@@ -19,14 +19,7 @@ do research on what I needed to implement.
         <meta charset="UTF-8">
         <title>About Luis Rivera</title>
     </head>
-    <style>
-        body {background-image: url('background.jpg');}
-        table {border-spacing: 3px; background-color: aliceblue;}
-        td, th {padding: 3px;}
-        a {text-decoration: none;}
-        a:hover{text-decoration: underline;}
-        body{font-family: monospace;}
-    </style>
+    <link rel="stylesheet" href="styles/style.css">
     <body>
         <h1>Luis Rivera</h1>
         <img src="Me_and_my_daughter.jpg" alt="Image of me and my daughter">
@@ -55,25 +48,25 @@ do research on what I needed to implement.
         <p>I had never shot a gun until I came to Utah in 2016. I quickly realized how much I enjoyed it. I’ve shot handguns, revolvers, 
            <br>riffles, and shotguns, but what I’ve come to enjoy the most is clay pigeon shooting. </p>
         <h2>Class Schedule</h2>
-        <table border="1">
-            <thead align="left" valign="top">
+        <table>
+            <thead>
                 <tr>
-                    <td style="width : 100px"></td>
-                    <th style="width : 100px">Monday</th>
-                    <th style="width : 100px">Tuesday</th>
-                    <th style="width : 100px">Wednesday</th>
-                    <th style="width : 100px">Thursday</th>
-                    <th style="width : 100px">Friday</th>
+                    <td></td>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
                 </tr>
             </thead>
-            <tbody align="left" valign="top">
+            <tbody>
                 <tr>
                     <td>8:30</td>
-                    <td rowspan="18" bgcolor="lightblue">Work</td>
-                    <td rowspan="5" bgcolor="lightblue">Work</td>
-                    <td rowspan="18" bgcolor="lightblue">Work</td>
-                    <td rowspan="5" bgcolor="lightblue">Work</td>
-                    <td rowspan="18" bgcolor="lightblue">Work</td>
+                    <td class="work" rowspan="18">Work</td>
+                    <td class="work" rowspan="5">Work</td>
+                    <td class="work" rowspan="18">Work</td>
+                    <td class="work" rowspan="5">Work</td>
+                    <td class="work" rowspan="18">Work</td>
                 </tr>
                 <tr>
                     <td>9:00</td>
@@ -94,8 +87,8 @@ do research on what I needed to implement.
                 </tr>
                 <tr>
                     <td>11:30</td>
-                    <td rowspan="2" bgcolor="lightgreen">CS 3260 CsharpNET</td>
-                    <td rowspan="2" bgcolor="lightgreen">CS 3260 CsharpNET</td>
+                    <td class="cs3260" rowspan="2">CS 3260 CsharpNET</td>
+                    <td class="cs3260" rowspan="2">CS 3260 CsharpNET</td>
                 </tr>
                 <tr>
                     <td>12:00</td>
@@ -107,8 +100,8 @@ do research on what I needed to implement.
                 </tr>
                 <tr>
                     <td>1:00</td>
-                    <td rowspan="9" bgcolor="lightblue">Work</td>
-                    <td rowspan="9" bgcolor="lightblue">Work</td>
+                    <td class="work" rowspan="9">Work</td>
+                    <td class="work" rowspan="9">Work</td>
                 </tr>
                 <tr>
                     <td>1:30</td>
@@ -148,14 +141,14 @@ do research on what I needed to implement.
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td rowspan="4" bgcolor="lightyellow">Music Rehearsal</td>
+                    <td class="rehearsal" rowspan="4">Music Rehearsal</td>
                 </tr>
                 <tr>
                     <td>6:30</td>
-                    <td rowspan="4" bgcolor="lightsalmon">Homework</td>
-                    <td rowspan="4" bgcolor="lightsalmon">Homework</td>
-                    <td rowspan="4" bgcolor="lightsalmon">Homework</td>
-                    <td rowspan="4" bgcolor="lightsalmon">Homework</td>
+                    <td class="homework" rowspan="4">Homework</td>
+                    <td class="homework" rowspan="4">Homework</td>
+                    <td class="homework" rowspan="4">Homework</td>
+                    <td class="homework" rowspan="4">Homework</td>
                 </tr>
                 <tr>
                     <td>7:00</td>

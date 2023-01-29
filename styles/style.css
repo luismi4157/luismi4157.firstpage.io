@@ -1,0 +1,45 @@
+body {
+    background-image: url('../background.jpg');
+    font-family: monospace;
+}
+
+table {
+    border: 1px solid;
+    border-spacing: 3px;
+    background-color: aliceblue;
+}
+
+thead, tbody{
+    text-align: left;
+    vertical-align: text-top;
+}
+
+td,th {
+    padding: 3px;
+    width: 100px;
+    border: 1px solid;
+}
+
+.work{
+    background-color: lightblue;
+}
+
+.cs3260{
+    background-color: lightgreen;
+}
+
+.rehearsal{
+    background-color: lightyellow;
+}
+
+.homework{
+    background-color: lightsalmon;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
