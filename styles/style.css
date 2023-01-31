@@ -1,10 +1,12 @@
 body {
-    background-image: url('../background.jpg');
-    font-family: monospace;
+    font-family: Arial;
+    font-size: 12px;
+    margin: 20px;
+    text-align: justify;
 }
 
 table {
-    border: 1px solid;
+    border: 5px solid black;
     border-spacing: 3px;
     background-color: aliceblue;
 }
@@ -14,10 +16,18 @@ thead, tbody{
     vertical-align: text-top;
 }
 
+th{
+    background-color: gray;
+}
+
 td,th {
     padding: 3px;
     width: 100px;
     border: 1px solid;
+}
+
+tr:nth-child(odd){
+    background-color: lightgray;
 }
 
 .work{
@@ -42,4 +52,40 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+p{
+    text-indent: 1.5%;
+    margin-bottom: 9px;
+}
+
+.myName{
+    padding-top: 20px;
+    font-size: 30pt;
+    text-decoration: underline;
+    /* background-image: linear-gradient(cyan, lightblue); */
+}
+
+img{
+    margin: 10px;
+    padding: 0px;
+    border: 6px solid white;
+    float: right;
+}
+
+h2{
+    margin-top: 24px;
+    margin-bottom: 34px;
+}
+
+.innerDiv{
+    background-color: rgb(248, 238, 228);
+    position: relative;
+    padding-left: 15px;
+    width: 50%;
+    left: 25%;
+}
+
+.outerDiv{
+    background-image: url('../background.jpg');
 }
