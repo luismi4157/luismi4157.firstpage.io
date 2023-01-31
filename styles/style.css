@@ -10,11 +10,18 @@ table {
     border: 5px solid black;
     border-spacing: 3px;
     background-color: aliceblue;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
-thead, tbody{
+tbody{
     text-align: left;
     vertical-align: text-top;
+}
+
+thead{
+    text-align: center;
+    vertical-align: text-bottom;
 }
 
 th{
@@ -75,12 +82,12 @@ img{
 }
 
 h2{
-    margin-top: 24px;
-    margin-bottom: 34px;
+    margin-bottom: 3px;
+    margin-top: 16.5px;
 }
 
 .innerDiv{
-    border-top: 0;
+    /* border-top: 0; */
     background-color: rgb(248, 238, 228);
     position: relative;
     padding-left: 15px;
