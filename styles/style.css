@@ -1,6 +1,6 @@
 @font-face{
-    font-family: Bugaki;
-    src: url(../Procerus_Regular.ttf);
+    font-family: Leyton;
+    src: url(../LeytonPersonal-Bold.otf);
 }
 
 body {
@@ -91,7 +91,7 @@ img{
 }
 
 h1 ,h2{
-    font-family: Bugaki;
+    font-family: Leyton;
 }
 
 h2{
