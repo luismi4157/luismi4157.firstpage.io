@@ -1,3 +1,8 @@
+@font-face{
+    font-family: Bugaki;
+    src: url(../Bugaki-Regular.ttf);
+}
+
 body {
     background-image: url('../background.jpg');
     background-attachment: fixed;
@@ -83,6 +88,10 @@ img{
     padding: 0px;
     border: 6px solid white;
     float: right;
+}
+
+h1 ,h2{
+    font-family: Bugaki;
 }
 
 h2{
