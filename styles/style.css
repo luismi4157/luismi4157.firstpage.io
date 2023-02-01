@@ -7,7 +7,7 @@ body {
     background-image: url('../background.jpg');
     background-attachment: fixed;
     font-family: Arial;
-    font-size: 12px;
+    font-size: 12pt;
     margin-top: 0;
     margin-bottom: 60px;
 }
@@ -71,7 +71,7 @@ a:hover {
 
 p{
     text-indent: 1.5%;
-    margin-bottom: 9px;
+    margin-bottom: 9pt;
 }
 
 .myName{
