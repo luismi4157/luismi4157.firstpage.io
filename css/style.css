@@ -1,3 +1,8 @@
+@font-face{
+    font-family: Leyton;
+    src: url(../LeytonPersonal-Bold.otf);
+}
+
 #content{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -5,8 +10,8 @@
     grid-template-areas:
     "header header header header"
     "nav nav nav nav"
-    "main main main main"
-    "main main main main"
+    "aside main main main"
+    "aside main main main"
     "footer footer footer footer" ;
 }
 
@@ -19,13 +24,14 @@
         "header header header header"
         "footer footer footer footer" 
         "nav nav nav nav"
-        "main main main main"
+        "aside aside aside aside"
         "main main main main"
         "main main main main";
     }
 }
 
 body{
+    font-family: Leyton;
     margin: 0;
 }
 
@@ -33,10 +39,10 @@ body{
 
 header{
     grid-area: header;
-    background-image: url("../img/MT-03shrunk.jpg");
+    background-image: url("../img/MT-03edit.jpg");
     background-repeat: no-repeat;
     background-position: center center;
-    height: 400px;
+    height: 800px;
 }
 
 
@@ -62,7 +68,7 @@ img{
     width: 100%;
     border: none;
     cursor: pointer;
-    font-size: large;
+    font-size: 32pt;
     text-align: center;
 }
 
@@ -70,6 +76,7 @@ button{
     width: fit-content;
     background: none;
     border: none;
+    background-color:cadetblue;
 }
 
 button:hover{
@@ -77,6 +84,10 @@ button:hover{
 }
 
 /* Header area end */
+
+aside{
+    grid-area: aside;
+}
 
 main{
     grid-area: main;
