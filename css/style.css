@@ -33,8 +33,12 @@ body{
 
 header{
     grid-area: header;
-    background-size: cover;
+    background-image: url("../img/MT-03shrunk.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 400px;
 }
+
 
 nav{
     display:flex;
@@ -48,10 +52,8 @@ img{
 
 #pageTitle{
     display: block;
+    color: black;
     text-align: center;
-    background-image: url("../img/MT-03edit.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
     margin: 0;
 }
 
