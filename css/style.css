@@ -1,0 +1,45 @@
+@media only screen and (max-width: 600px){
+    .modal-content{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: minmax(100px, auto);
+        grid-gap: 10px;
+        grid-template-areas:
+        "header header header header"
+        "nav nav nav nav"
+        "main main main main"
+        "footer footer footer footer" ;
+    }
+}
+
+#content{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 10px;
+    grid-template-areas:
+    "header header header header"
+    "nav main main main"
+    "nav main main main"
+    "footer footer footer footer" ;
+}
+
+header{
+    grid-area: header;
+    background-color: aqua;
+}
+
+main{
+    grid-area: main;
+    background-color: brown;
+}
+
+footer{
+    grid-area: footer;
+    background-color: chartreuse;
+}
+
+nav{
+    grid-area: nav;
+    background-color: blueviolet;
+}
