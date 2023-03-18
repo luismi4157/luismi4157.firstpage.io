@@ -40,6 +40,15 @@ footer{
 }
 
 nav{
+    display:flex;
     grid-area: nav;
     background-color: blueviolet;
+}
+
+.show{
+    display: block;
+}
+
+.hide{
+    display: none;
 }
