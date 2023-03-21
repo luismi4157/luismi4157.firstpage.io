@@ -1,8 +1,8 @@
 "use strict";
-let mainSections = ["home", "gear", "info", "contact"]
+let mainSections = ["home", "info", "contact"]
 let buttons = document.querySelectorAll('nav > button');
 
-for(let i = 0; i < buttons.length; i++){
+for(let i = 0; i < mainSections.length; i++){
     buttons[i].addEventListener("click", buttonClick)
 };
 

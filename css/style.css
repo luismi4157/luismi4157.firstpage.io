@@ -15,7 +15,7 @@
     "footer footer footer footer";
 }
 
-@media only screen and (max-width: 600px){
+@media only all and (max-width: 768px){
     #content{
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -74,7 +74,7 @@ img{
 #pageTitle{
     display: block;
     color: black;
-    text-align: center;
+    text-align: left;
     margin: 0;
 }
 
