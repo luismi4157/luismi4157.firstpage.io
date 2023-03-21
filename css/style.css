@@ -28,6 +28,22 @@
         "main main main main"
         "footer footer footer footer";
     }
+    table{
+        width: 100%;
+    }
+    .difficultySection, .powerSection, .styleSection, .reliableSection, .priceSection{
+        flex-direction: column;
+      }
+      .difficultySection > section, .powerSection > section, .styleSection > section, .reliableSection > section, .priceSection > section{
+        flex: 1;
+        order: 1;
+      }
+    
+      .difficultySection > figure, .powerSection > figure, .styleSection > figure, .reliableSection > figure, .priceSection > figure{
+        flex: 1;
+        order: 2;
+        max-width: 100%;
+      } 
 }
 
 body{
@@ -179,6 +195,7 @@ figure {
 
 footer{
     grid-area: footer;
+    background-color: black;
 }
 
 .show{
