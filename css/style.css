@@ -40,13 +40,13 @@ header{
     background-image: url("../img/MT-03edit.jpg");
     background-repeat: no-repeat;
     background-position: center center;
-    height: 800px;
+    height: 600px;
 }
 
 nav{
     display:flex;
     background-color:cadetblue;
-    /* height: 80px; */
+    height: 70px;
     grid-area: nav;
 }
 
@@ -67,7 +67,7 @@ img{
     width: 100%;
     border: none;
     cursor: pointer;
-    font-size: 28pt;
+    font-size: 20pt;
     text-align: center;
 }
 
@@ -93,15 +93,33 @@ button:hover{
 
 /* Aside area begins */
 aside{
+    display: flex;
     grid-area: aside;
+    justify-content: center;
 }
 
 table{
     margin: 0;
     border: 2px solid black;
+    border-collapse: collapse;
     text-align: left;
-    width: 100%;
-    height: auto;
+    width: 60%;
+    height:fit-content;
+}
+table > thead{
+    background-color:cadetblue;
+}
+
+th, td{
+    padding: 10px;
+}
+
+tbody tr:nth-child(odd){
+    background-color: lightcyan;
+}
+
+tbody tr:nth-child(even){
+    background-color:azure;
 }
 /* Aside area ends */
 
@@ -117,7 +135,7 @@ p{
 }
 
 #pageTitle{
-    font-size: 32pt;
+    font-size: 26pt;
     text-decoration: underline;
 }
 
@@ -125,6 +143,37 @@ h2{
     font-size: 26pt;
     text-decoration: underline;
 }
+
+figure {
+    border: 1px #cccccc solid;
+    padding: 4px;
+    width: fit-content;
+    margin: auto;
+  }
+  
+  figcaption {
+    background-color: black;
+    color: white;
+    font-style: italic;
+    padding: 2px;
+    text-align: center;
+  }
+
+  .difficultySection, .powerSection, .styleSection, .reliableSection, .priceSection{
+    display: flex;
+    margin: 10px;
+  }
+
+   .difficultySection > section, .powerSection > section, .styleSection > section, .reliableSection > section, .priceSection > section{
+    flex: 1;
+    order: 1;
+  }
+
+  .difficultySection > figure, .powerSection > figure, .styleSection > figure, .reliableSection > figure, .priceSection > figure{
+    flex: 1;
+    order: 2;
+    width: max-content;
+  } 
 /* Main area ends */
 
 
@@ -133,7 +182,7 @@ footer{
 }
 
 .show{
-    display: block;
+    display: flexbox;
 }
 
 .hide{
