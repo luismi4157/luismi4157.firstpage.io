@@ -1,3 +1,5 @@
+/* Added radius to table border
+Removed space between figure image and caption */
 @font-face{
     font-family: Leyton;
     src: url(../LeytonPersonal-Bold.otf);
@@ -70,6 +72,7 @@ nav{
 img{
     max-width: 100%;
     height: auto;
+    vertical-align: middle;
 }
 
 #pageTitle{
@@ -92,8 +95,6 @@ img{
     background-color:black;
     height:auto;
     width: 15px;
-    /* margin-top: 3px;
-    margin-bottom: 3px; */
 }
 
 button{
@@ -119,6 +120,8 @@ table{
     margin: 0;
     border: 2px solid black;
     border-collapse: collapse;
+    border-radius: 1em;
+    overflow: hidden;
     text-align: left;
     width: 60%;
     height:fit-content;
