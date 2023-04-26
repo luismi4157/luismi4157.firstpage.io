@@ -94,11 +94,16 @@ function validateForm() {
   function checkFormat(id, msg, regex) {
     //this function applies a regex to determine if element is valid
    //TODO-get element value and test it against the regex that was passed in
+   // -Done
     let el = document.getElementById(id);
-    let result = regex.test(el.vlaue)
-    window.alert(regex);
-    window.alert(el.value);
-    window.alert(result);
+    let valid = regex.test(el.value)
+    // if (result){
+    //   window.alert("True");
+    // }
+    // else{
+    //   alert("You have entered an invalid email address!");
+    // }
+
     setElementValidity(id, valid, msg);
     return valid;
   
