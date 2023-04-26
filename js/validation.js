@@ -26,7 +26,9 @@ function initValidation(formID, successID){
 function inputChanged(ev){
     let el = ev.currentTarget;
     validateForm();
-    //TODO: ADD 'was-validated' to the current element
+    //TODO: ADD 'was-validated' to the current element 
+    // -Done
+    el.clasList.add("was-validated");
 }
 
 function submitForm(ev){
@@ -40,10 +42,14 @@ function submitForm(ev){
 
     if (!form.checkValidity()){
         //TODO - if form is invalid, set 'was-validated' class on all inputs to show errors
-
+        let inputs = document.querySelectorAll("input");
+        for (let input of inputs){
+          input.classList.add("was-validated");
+        }
     }
     else{
         /*TODO - hide form and show success Message*/
+        form.classList.add("hide");
     }
 }
 
@@ -77,14 +83,22 @@ function validateForm() {
     //TODO
     //get value from el, and convert to upper case
     //check whether the value is in the stateAbbreviations array
-   
+    // -Done
+    let state = el.value.toUpperCase()
+    if (stateAbbreviations.includes(state)){
+      valid = true;
+    }
     setElementValidity(id, valid, msg);
   }
   
   function checkFormat(id, msg, regex) {
     //this function applies a regex to determine if element is valid
    //TODO-get element value and test it against the regex that was passed in
-  
+    let el = document.getElementById(id);
+    let result = regex.test(el.vlaue)
+    window.alert(regex);
+    window.alert(el.value);
+    window.alert(result);
     setElementValidity(id, valid, msg);
     return valid;
   
@@ -97,6 +111,9 @@ function validateForm() {
       case 'text':
       case 'password':
        //TODO-check if input has a 'value', set valid to true if so, false if not
+       if(el.value){
+        valid = true;
+       }
         break;
   
       case 'checkbox':

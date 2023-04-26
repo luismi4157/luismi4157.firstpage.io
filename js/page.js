@@ -1,5 +1,5 @@
 "use strict";
-let mainSections = ["home", "info", "contact"]
+let mainSections = ["home", "info", "contact", "form"]
 let buttons = document.querySelectorAll('nav > button');
 let themeButton = document.getElementById("themeButton");
 
@@ -25,6 +25,7 @@ function buttonClick(ev){
     }
     
     //show selected content section
+    // window.alert(ev.currentTarget.name);
     let name = `${ev.currentTarget.name}Section`;
     let showSection = document.getElementById(name);
     showSection.classList.remove('hide');
