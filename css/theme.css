@@ -32,6 +32,18 @@ tbody tr:nth-child(even){
     background-color:rgb(252, 252, 252);
 }
 
+.flex button {
+    margin: auto;
+    padding: 22px 46px;
+    font: normal 22px/1.5;
+    border: none;
+    background: rgb(190, 120, 29);
+    color: #f2f2f2;
+    text-transform: uppercase;
+    letter-spacing: .09em;
+    border-radius: 4px;
+  }
+
 @media screen and (max-width: 768px){
     #content{
         display: grid;

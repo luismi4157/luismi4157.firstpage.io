@@ -50,7 +50,10 @@ function submitForm(ev){
     }
     else{
         /*TODO - hide form and show success Message*/
+        // -Done
         form.classList.add("hide");
+        let message = document.getElementById("success");
+        message.style.display = "block";
     }
 }
 
@@ -154,11 +157,22 @@ function validateForm() {
     if (valid) { //it has a value
   
       el.setCustomValidity(''); //sets to no error message and field is valid
-    } else {
+      
+      if (el.nextElementSibling.firstChild){
+          el.nextElementSibling.removeChild(el.nextElementSibling.firstChild);
+      }
+    } 
+    else {
   
       el.setCustomValidity(message); //sets error message and field gets 'invalid' stat
+      // console.log(el.nextElementSibling.className);
+      if(!el.nextElementSibling.firstChild){
+        let textNode = document.createTextNode(message);
+        el.nextElementSibling.appendChild(textNode);
+      }
   
       //TODO  insert or remove message in error div for element
+      // -Done
   
     }
   

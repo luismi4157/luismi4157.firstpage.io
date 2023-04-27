@@ -181,7 +181,7 @@ footer{
 }
 
 form {
-    width: 400px;
+    width: 1500px;
   }
   
   .errorMsg {
@@ -208,21 +208,34 @@ form {
   
   .container {
     width: 80%;
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: auto;
+    margin: 0;
     background-color: #f2f2f2;
+    /* text-align: left; */
   }
   
   .container * {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  
+
+  .container h1{
+    font-size: 32pt;
+    margin: 0;
+    padding-left: 40px;
+  }
+
+  .container h2{
+    font-size: 18pt;
+    margin-bottom: 0;
+  }
+
   .flex {
     list-style-type: none;
-    padding: 0;
-    max-width: 500px;
-    margin: 0 auto;
+    padding: 40px;
+    padding-top: 20px;
+    max-width: 750px;
+    margin: 0;
   }
   
   .flex li {
@@ -236,7 +249,7 @@ form {
             align-items: center;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
-            justify-content: flex-end;
+            justify-content: flex-start;
   }
   
   .flex li li input,
@@ -245,12 +258,14 @@ form {
     font: normal 16px/1.5 sans-serif;
   }
   
+  /* submit button */
   .flex button {
-    margin: auto;
+    margin: 0;
+    text-align: left;
     padding: 22px 46px;
     font: normal 22px/1.5 sans-serif;
     border: none;
-    background: #D84315;
+    background: cadetblue;
     color: #f2f2f2;
     text-transform: uppercase;
     letter-spacing: .09em;
@@ -265,7 +280,7 @@ form {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 140px;
             flex: 1 0 140px;
-    max-width: 200px;
+    max-width: 120px;
   }
   
   .flex > li + * {
@@ -281,6 +296,8 @@ form {
             flex: 1 0 350px;
     text-align: right;
   }
+
+  /* Mobile view */
 
 @media screen and (max-width: 768px){
     #content{
