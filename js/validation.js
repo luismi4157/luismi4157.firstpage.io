@@ -1,6 +1,6 @@
 let phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
 let emailRegex = /[\w]*@[\w]*.{1}(com|gov|edu|io|net){1}/;
-let zipCodeRegex = /^[0-9]{5}(?:-[0-9]{4})?$/; //Test
+let zipCodeRegex = /^[0-9]{5}(?:-[0-9]{4})?$/;
 
 const stateAbbreviations = [
     'AL', 'AK', 'AS', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'DC', 'FM', 'FL', 'GA',
@@ -25,10 +25,7 @@ function initValidation(formID, successID){
 
 function inputChanged(ev){
     let el = ev.currentTarget;
-    // window.alert(el.value);
     validateForm();
-    //TODO: ADD 'was-validated' to the current element 
-    // -Done
     el.classList.add("was-validated");
 }
 
@@ -42,15 +39,12 @@ function submitForm(ev){
     validateForm();
 
     if (!form.checkValidity()){
-        //TODO - if form is invalid, set 'was-validated' class on all inputs to show errors
         let inputs = document.querySelectorAll("input");
         for (let input of inputs){
           input.classList.add("was-validated");
         }
     }
     else{
-        /*TODO - hide form and show success Message*/
-        // -Done
         form.classList.add("hide");
         let message = document.getElementById("success");
         message.style.display = "block";
@@ -84,10 +78,6 @@ function validateForm() {
   function validateState(id, msg) {
     let el = document.getElementById(id);
     let valid = false;
-    //TODO
-    //get value from el, and convert to upper case
-    //check whether the value is in the stateAbbreviations array
-    // -Done
     let state = el.value.toUpperCase()
     if (stateAbbreviations.includes(state)){
       valid = true;
@@ -96,17 +86,8 @@ function validateForm() {
   }
   
   function checkFormat(id, msg, regex) {
-    //this function applies a regex to determine if element is valid
-   //TODO-get element value and test it against the regex that was passed in
-   // -Done
     let el = document.getElementById(id);
     let valid = regex.test(el.value)
-    // if (result){
-    //   window.alert("True");
-    // }
-    // else{
-    //   alert("You have entered an invalid email address!");
-    // }
 
     setElementValidity(id, valid, msg);
     return valid;
@@ -118,31 +99,18 @@ function validateForm() {
     let type = el.type;
     switch (type) {
       case 'text':
-      //case 'password':
-       //TODO-check if input has a 'value', set valid to true if so, false if not
-       // -Done
        if(el.value){
         valid = true;
        }
         break;
   
       case 'checkbox':
-      //case 'radio':
-  
-    //TODO
-    //Validate whether any of the checkboxes are checked. set 'valid' to true if checked
-    //remember that the 'name' field is shared by all of them so you can get the element's name, then
-    //use a querySelectorAll to get the radio/check elements to validate.
-    //if any of the elements is 'checked', return true.
-    // -Done
-    let checkboxes = document.getElementsByName("find-page");
-    // console.log(checkboxes.length);
-    for (let checkbox of checkboxes){
-      if(checkbox.checked){
-        // console.log("Checked");
-        valid = true;
-      }
-    }
+        let checkboxes = document.getElementsByName("find-page");
+        for (let checkbox of checkboxes){
+          if(checkbox.checked){
+            valid = true;
+          }
+        }
     break;
     }
     setElementValidity(id, valid, message);
@@ -154,26 +122,41 @@ function validateForm() {
   function setElementValidity(id, valid, message) {
     let el = document.getElementById(id);
   
-    if (valid) { //it has a value
-  
-      el.setCustomValidity(''); //sets to no error message and field is valid
-      
+    if (valid) {
+      el.setCustomValidity('');
+      let sibling = el.nextElementSibling;
+      console.log(el.nextElementSibling.firstChild);
+      console.log(el.type == "text");
       if (el.nextElementSibling.firstChild){
-          el.nextElementSibling.removeChild(el.nextElementSibling.firstChild);
+        console.log("In");
+        if (el.type == "text"){
+          sibling.removeChild(sibling.firstChild);
+        }
+        else{
+          sibling = sibling.nextElementSibling;
+          console.log(sibling.tagName)
+          if(sibling.firstChild){
+            sibling.removeChild(sibling.firstChild);
+          }
+      }
       }
     } 
     else {
-  
-      el.setCustomValidity(message); //sets error message and field gets 'invalid' stat
-      // console.log(el.nextElementSibling.className);
-      if(!el.nextElementSibling.firstChild){
+      console.log(`Not valid ${id}`);
+      el.setCustomValidity(message);
+      let sibling = el.nextElementSibling;
+      if (id == "newspaper"){
+        sibling = sibling.nextElementSibling;
         let textNode = document.createTextNode(message);
-        el.nextElementSibling.appendChild(textNode);
+        if (!sibling.firstChild){
+        sibling.appendChild(textNode);
+        }
       }
-  
-      //TODO  insert or remove message in error div for element
-      // -Done
-  
+      else{
+        if(!el.nextElementSibling.firstChild){
+          let textNode = document.createTextNode(message);
+          sibling.appendChild(textNode);
+        }
+      }
     }
-  
   }
