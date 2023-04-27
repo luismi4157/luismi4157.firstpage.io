@@ -25,10 +25,11 @@ function initValidation(formID, successID){
 
 function inputChanged(ev){
     let el = ev.currentTarget;
+    // window.alert(el.value);
     validateForm();
     //TODO: ADD 'was-validated' to the current element 
     // -Done
-    el.clasList.add("was-validated");
+    el.classList.add("was-validated");
 }
 
 function submitForm(ev){
@@ -114,23 +115,32 @@ function validateForm() {
     let type = el.type;
     switch (type) {
       case 'text':
-      case 'password':
+      //case 'password':
        //TODO-check if input has a 'value', set valid to true if so, false if not
+       // -Done
        if(el.value){
         valid = true;
        }
         break;
   
       case 'checkbox':
-      case 'radio':
+      //case 'radio':
   
     //TODO
     //Validate whether any of the checkboxes are checked. set 'valid' to true if checked
     //remember that the 'name' field is shared by all of them so you can get the element's name, then
     //use a querySelectorAll to get the radio/check elements to validate.
     //if any of the elements is 'checked', return true.
-      
-  
+    // -Done
+    let checkboxes = document.getElementsByName("find-page");
+    // console.log(checkboxes.length);
+    for (let checkbox of checkboxes){
+      if(checkbox.checked){
+        // console.log("Checked");
+        valid = true;
+      }
+    }
+    break;
     }
     setElementValidity(id, valid, message);
     
